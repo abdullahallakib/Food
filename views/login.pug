@@ -1,0 +1,31 @@
+extends base
+block content 
+  main.mainlogin
+    .login-form
+      h2.heading-secondary.ma-bt-lg Log into your account
+      form.form.form--login
+        .form__group
+          label.form__label(for='email') Email address
+          input#email.form__input(type='email', placeholder='you@example.com', required)
+        .form__group.ma-bt-md
+          label.form__label(for='password') Password
+          input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
+        .form__group
+          button.btn.login
+            span Login
+//- include base2
+//- include _header
+//- block content 
+//-   .login-form-container
+//-     form(action="")
+//-       h3 login form
+//-       input.box(type="email", name="", placeholder="enter your email", id="")
+//-       input.box(type="password", name="", placeholder="enter your password", id="")
+//-       .remember
+//-         input#remember-me(type="checkbox", name="")
+//-         label(for="remember-me") remember me
+//-       input.btn(type="submit", value="login now")
+//-       p forget password? 
+//-         a(href="#") click here
+//-       p don&apos;t have an account? 
+//-         a(href="#") create one

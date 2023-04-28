@@ -1,0 +1,75 @@
+doctype html
+html
+    head
+        block head
+            meta(charset="UTF-8")
+            meta(http-equiv="X-UA-Compatible", content="IE=edge")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            title 𝗢𝗿𝗴𝗮𝗻𝗶𝗰 𝗙𝗼𝗼𝗱
+            // font awesome cdn link
+            link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css")
+
+            // custom css file link
+            link(rel="stylesheet", href="css/stylePaymentGateway.css")      
+
+    body
+        .wrapper
+            h2 Payment Form
+            form(method="POST")
+                h4 Account
+                .input-group
+                    .input-box
+                        input.name(type="text", placeholder="Full Name", required)
+                        i.fa.fa-user.icon
+                    .input-box
+                        input.name(type="text", placeholder="Nick Name", required)
+                        i.fa.fa-user.icon
+                .input-group
+                    .input-box
+                        input.name(type="email", placeholder="Email Adress", required)
+                        i.fa.fa-envelope.icon
+                .input-group
+                    .input-box
+                        h4 Date of Birth
+                        input.dob(type="text", placeholder="DD")
+                        input.dob(type="text", placeholder="MM")
+                        input.dob(type="text", placeholder="YYYY")
+                    .input-box
+                        h4 Gender
+                        input#b1.radio(type="radio", name="gendar", checked)
+                        label(for="b1") Male
+                        input#b2.radio(type="radio", name="gendar")
+                        label(for="b2") Female
+                .input-group
+                    .input-box
+                        h4 Payment Details
+                        input#bc1.radio(type="radio", name="pay", checked)
+                        label(for="bc1")
+                            span
+                                i.fa.fa-cc-visa
+                                | Credit Card
+                        input#bc2.radio(type="radio", name="pay")
+                        label(for="bc2")
+                            span
+                                i.fa.fa-cc-paypal
+                                | Paypal
+                .input-group
+                    .input-box
+                        input.name(type="tel", placeholder="Card Number", required)
+                        i.fa.fa-credit-card.icon
+                .input-group
+                    .input-box
+                        input.name(type="tel", placeholder="Card CVC", required)
+                        i.fa.fa-user.icon
+                    .input-box
+                        select
+                            option 01 jun
+                            option 02 jun
+                            option 03 jun
+                        select
+                            option 2020
+                            option 2021
+                            option 2022
+                .input-group
+                    .input-box
+                        button.PymentSubmit PAY NOW

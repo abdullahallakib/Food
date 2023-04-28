@@ -1,0 +1,1030 @@
+extends base
+block append head 
+
+block content
+  section.search-form-container
+    form(action="")
+      input#search-box(type="search", name="", placeholder="search here..")
+      label.fas.fa-search(for="search-box")
+  section.shopping-cart-container
+    .products-container
+      h3.title your products
+      .box-container#cartContainer
+        //- .box.cartItem
+        //-   i.fas.fa-times
+        //-   img(src="image/menu-1.png", alt="menu img")
+        //-   .content
+        //-     h3 delicious food
+        //-     span  quantity : 
+        //-     input(type="number", name="", value="1", id="")
+        //-     br
+        //-     span  price : 
+        //-     span.price  $40.00 
+        //- .box.cartItem
+        //-   i.fas.fa-times
+        //-   img(src="image/menu-2.png", alt="")
+        //-   .content
+        //-     h3 delicious food
+        //-     span  quantity : 
+        //-     input(type="number", name="", value="1", id="")
+        //-     br
+        //-     span  price : 
+        //-     span.price  $40.00 
+        //- .box.cartItem
+        //-   i.fas.fa-times
+        //-   img(src="image/menu-3.png", alt="")
+        //-   .content
+        //-     h3 delicious food
+        //-     span  quantity : 
+        //-     input(type="number", name="", value="1", id="")
+        //-     br
+        //-     span  price : 
+        //-     span.price  $40.00 
+        //- .box.cartItem
+        //-   i.fas.fa-times
+        //-   img(src="image/menu-4.png", alt="")
+        //-   .content
+        //-     h3 delicious food
+        //-     span  quantity : 
+        //-     input(type="number", name="", value="1", id="")
+        //-     br
+        //-     span  price : 
+        //-     span.price  $40.00 
+        //- .box.cartItem
+        //-   i.fas.fa-times
+        //-   img(src="image/menu-5.png", alt="")
+        //-   .content
+        //-     h3 delicious food
+        //-     span  quantity : 
+        //-     input(type="number", name="", value="1", id="")
+        //-     br
+        //-     span  price : 
+        //-     span.price  $40.00 
+    .cart-total
+      h3.title  Details  
+      .box
+        //- h3.subtotal  subtotal : 
+        //-   span.subtotalamount $200
+        h3.total  total : 
+          span.subtotalamount $0
+        //- a.btn(href="/checkout") proceed to checkout
+      section#order.order
+        form.order-form
+          .flex
+            .inputBox
+              span your name
+              input(type="text", placeholder="customer's name", name="", id="orderName" required)
+            .inputBox
+              span your number
+              input(type="number", placeholder="customer's number", name="", id="BookingNumber" required)
+          .flex
+            .inputBox
+              span your details
+              input(type="text", placeholder="your message", name="", id="BookingDetails")
+            .inputBox
+              span Email address 
+              input(type='email', placeholder='you@example.com' ,id="BookingEmail" required)
+          .flex
+            .inputBox
+              textarea(placeholder="your address", id="BookingAdress", cols="30", rows="10")
+            .inputBox
+              iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1634657187694!5m2!1sen!2sin", allowfullscreen="", loading="lazy")
+            //- if user 
+          button.btn#procedOrder proceed to order
+      .wrapper.pyactive
+        h2 Payment Form
+        form.paymentForm
+          h4.payment-heading Account
+          .input-group
+            .input-box
+              input.name(type="text", placeholder="Full Name", required)
+              i.fa.fa-user.icon
+            .input-box
+              input.name(type="text", placeholder="Nick Name", required)
+              i.fa.fa-user.icon
+          .input-group
+            .input-box
+              input.name(type="email", placeholder="Email Adress", required)
+              i.fa.fa-envelope.icon
+          .input-group
+            .input-box
+              h4 Date of Birth
+              input.dob(type="text", placeholder="DD")
+              input.dob(type="text", placeholder="MM")
+              input.dob(type="text", placeholder="YYYY")
+            .input-box
+              h4 Gender
+              input#b1.radio(type="radio", name="gendar", checked)
+              label(for="b1") Male
+              input#b2.radio(type="radio", name="gendar")
+              label(for="b2") Female
+          .input-group
+            .input-box
+              h4 Payment Details
+              input#bc1.radio(type="radio", name="pay", checked)
+              label(for="bc1")
+                span
+                  i.fa.fa-cc-visa
+                  | Credit Card
+              input#bc2.radio(type="radio", name="pay")
+              label(for="bc2")
+                span
+                  i.fa.fa-cc-paypal
+                  | Paypal
+          .input-group
+            .input-box
+              input.name(type="tel", placeholder="Card Number", required)
+              i.fa.fa-credit-card.icon
+          .input-group
+            .input-box
+              input.name(type="tel", placeholder="Card CVC", required)
+              i.fa.fa-user.icon
+            .input-box
+              select
+                option 01 jun
+                option 02 jun
+                option 03 jun
+              select
+                option 2020
+                option 2021
+                option 2022
+          .input-group
+            .input-box
+          button.PymentSubmit PAY NOW
+      
+          //- else 
+          //-   a(href="/login").btn LOG IN TO ORGANIC FOOD
+
+
+  //- .login-form-container
+  //-   form(action="")
+  //-     h3 login form
+  //-     input.box.login(type="email", name="", placeholder="enter your email", id="")
+  //-     input.box.password(type="password", name="", placeholder="enter your password", id="")
+  //-     .remember
+  //-       input#remember-me(type="checkbox", name="")
+  //-       label(for="remember-me") remember me
+  //-     input.btn#login(type="submit", value="login now")
+  //-     p forget password? 
+  //-       a(href="#") click here
+  //-     p don&apos;t have an account? 
+  //-       a(href="#") create one
+  section#home.home
+    .content
+      span welcome foodies
+      h3 different spices for the different tastes 😋
+      p A healthy 🅾🆁🅶🅰🅽🅸🅲 🅵🅾🅾🅳 delivered to your door, every single day
+      a.btn(href="#") order now
+    .image
+      img.home-img(src="image/home-img.png", alt="")
+      img.home-parallax-img(src="image/home-parallax-img.png", alt="")
+  // home section ends
+  // category section starts
+  section.category
+    a.box(href="#")
+      img(src="image/cat-1.png", alt="")
+      h3 combo
+    a.box(href="#")
+      img(src="image/cat-2.png", alt="")
+      h3 pizza
+    a.box(href="#")
+      img(src="image/cat-3.png", alt="")
+      h3 burger
+    a.box(href="#")
+      img(src="image/cat-4.png", alt="")
+      h3 chicken
+    a.box(href="#")
+      img(src="image/cat-5.png", alt="")
+      h3 dinner
+    a.box(href="#")
+      img(src="image/cat-6.png", alt="")
+      h3 coffee
+  //- section#about.about
+  //-   .image
+  //-     img(src="image/about-img.png", alt="")
+  //-   .content
+  //-     span why choose us?
+  //-     h3.title what&apos;s make our food delicious!
+  //-     p "Experience the deliciousness of our food made with high-quality ingredients and skillful preparation by passionate chefs."
+  //-     a.btn(href="#") read more
+  //-     .icons-container
+  //-       .icons
+  //-         img(src="image/serv-1.png", alt="")
+  //-         h3 fast delivery
+  //-       .icons
+  //-         img(src="image/serv-2.png", alt="")
+  //-         h3 fresh food
+  //-       .icons
+  //-         img(src="image/serv-3.png", alt="")
+  //-         h3 best quality
+  //-       .icons
+  //-         img(src="image/serv-4.png", alt="")
+  //-         h3 24/7 support
+  // about section ends
+  // popular section starts
+  //- section#popular.popular
+  //- .heading
+  //-   span popular food
+  //-   h3#clickbtn our special dishes
+  //- .box-container#paginated-list(data-current-page="1", aria-live="polite")
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-1.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-2.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-3.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-4.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-5.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-6.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-7.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+  //-   .box
+  //-     a.fas.fa-heart(href="#")
+  //-     .image
+  //-       img(src="image/food-8.png", alt="")
+  //-     .content
+  //-       h3 delicious food
+  //-       .stars
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star
+  //-         i.fas.fa-star-half-alt
+  //-         span  (50) 
+  //-       .price $40.00 
+  //-         span $50.00
+  //-       a.btn(href="#") add to cart
+
+  //- nav.pagination-container
+  //-   button#prev-button.pagination-button(aria-label="Previous page", title="Previous page")
+  //-     i.fa.fa-chevron-circle-left(style="font-size: 20px; color: balck")
+  //-   #pagination-numbers
+  //-   button#next-button.pagination-button(aria-label="Next page", title="Next page")
+  //-     i.fa.fa-chevron-circle-right(style="font-size: 20px; color: balck")
+  section#popular.popular
+    .heading
+      span popular food
+      h3 our special dishes
+    .box-container#paginated-list(data-current-page="1", aria-live="polite")
+      each Food in foods 
+        .box
+          a.fas.fa-heart(href="#")
+          .image
+            img(src=`image/${Food.image}`, alt=`${Food.name} image`)
+          .content
+            h3= Food.name
+            .stars
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star-half-alt
+              span= (Food.rating) 
+            .price= `$${Food.price}` 
+              span= `$${Food.previous_Price}.00` 
+            if(Food.stock==='Add To Cart')
+              button.btn.addToCart(href="")= Food.stock
+            else
+              a.btn.outofstock(href="#")= Food.stock
+      //- .box
+      //-   a.fas.fa-heart(href="#")
+      //-   .image
+      //-     img(src="image/food-2.png", alt="")
+      //-   .content
+      //-     h3 delicious food
+      //-     .stars
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star-half-alt
+      //-       span  (50) 
+      //-     .price $40.00 
+      //-       span $50.00
+      //-     a.btn(href="#") add to cart
+      //- .box
+      //-   a.fas.fa-heart(href="#")
+      //-   .image
+      //-     img(src="image/food-3.png", alt="")
+      //-   .content
+      //-     h3 delicious food
+      //-     .stars
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star-half-alt
+      //-       span  (50) 
+      //-     .price $40.00 
+      //-       span $50.00
+      //-     a.btn(href="#") add to cart
+      //- .box
+      //-   a.fas.fa-heart(href="#")
+      //-   .image
+      //-     img(src="image/food-4.png", alt="")
+      //-   .content
+      //-     h3 delicious food
+      //-     .stars
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star-half-alt
+      //-       span  (50) 
+      //-     .price $40.00 
+      //-       span $50.00
+      //-     a.btn(href="#") add to cart
+      //- .box
+      //-   a.fas.fa-heart(href="#")
+      //-   .image
+      //-     img(src="image/food-5.png", alt="")
+      //-   .content
+      //-     h3 delicious food
+      //-     .stars
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star-half-alt
+      //-       span  (50) 
+      //-     .price $40.00 
+      //-       span $50.00
+      //-     a.btn(href="#") add to cart
+      //- .box
+      //-   a.fas.fa-heart(href="#")
+      //-   .image
+      //-     img(src="image/food-6.png", alt="")
+      //-   .content
+      //-     h3 delicious food
+      //-     .stars
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star-half-alt
+      //-       span  (50) 
+      //-     .price $40.00 
+      //-       span $50.00
+      //-     a.btn(href="#") add to cart
+      //- .box
+      //-   a.fas.fa-heart(href="#")
+      //-   .image
+      //-     img(src="image/food-7.png", alt="")
+      //-   .content
+      //-     h3 delicious food
+      //-     .stars
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star-half-alt
+      //-       span  (50) 
+      //-     .price $40.00 
+      //-       span $50.00
+      //-     a.btn(href="#") add to cart
+      //- .box
+      //-   a.fas.fa-heart(href="#")
+      //-   .image
+      //-     img(src="image/food-8.png", alt="")
+      //-   .content
+      //-     h3 delicious food
+      //-     .stars
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star
+      //-       i.fas.fa-star-half-alt
+      //-       span  (50) 
+      //-     .price $40.00 
+      //-       span $50.00
+      //-     a.btn(href="#") add to cart
+  nav.pagination-container
+    button#prev-button.pagination-button(aria-label="Previous page", title="Previous page")
+      i.fa.fa-chevron-circle-left(style="font-size: 20px; color: balck")
+    #pagination-numbers
+    button#next-button.pagination-button(aria-label="Next page", title="Next page")
+      i.fa.fa-chevron-circle-right(style="font-size: 20px; color: balck")  
+  //- section#popular.popular
+  //-   .heading
+  //-     span popular food
+  //-     h3#clickbtn our special dishes
+  //-   #paginated-list.box-container(data-current-page="1", aria-live="polite")
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-1.png", alt="""")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-2.png", alt="")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-3.png", alt="")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-4.png", alt="")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-5.png", alt="")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-6.png", alt="")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-7.png", alt="")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+  //- .box
+  //-   a.fas.fa-heart(href="#")
+  //-   .image
+  //-     img(src="image/food-8.png", alt="")
+  //-   .content
+  //-     h3 delicious food
+  //-     .stars
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star
+  //-       i.fas.fa-star-half-alt
+  //-       span  (50) 
+  //-     .price $40.00 
+  //-       span $50.00
+  //-     a.btn(href="#") add to cart
+    li Item 1
+    li Item 2
+    li Item 3
+    li Item 4
+    li Item 5
+    li Item 6
+    li Item 7
+    li Item 8
+    li Item 9
+    li Item 10
+    li Item 11
+    li Item 12
+    li Item 13
+    li Item 14
+    li Item 15
+    li Item 16
+    li Item 17
+    li Item 18
+    li Item 19
+    li Item 20
+    li Item 21
+    li Item 22
+    li Item 23
+    li Item 24
+    li Item 25
+    li Item 26
+    li Item 27
+    li Item 28
+    li Item 29
+    li Item 30
+    li Item 31
+    li Item 32
+    li Item 33
+    li Item 34
+    li Item 35
+    li Item 36
+    li Item 37
+    li Item 38
+    li Item 39
+    li Item 40
+    li Item 41
+    li Item 42
+    li Item 43
+    li Item 44
+    li Item 45
+    li Item 46
+    li Item 47
+    li Item 48
+    li Item 49
+    li Item 50  
+    nav.pagination-container
+      button#prev-button.pagination-button(aria-label="Previous page", title="Previous page")
+        i.fa.fa-chevron-circle-left(style="font-size: 20px; color: balck")
+      #pagination-numbers
+      button#next-button.pagination-button(aria-label="Next page", title="Next page")
+        i.fa.fa-chevron-circle-right(style="font-size: 20px; color: balck")
+
+
+
+  //- .soft-pagination
+  //- ul.soft-pagination-items
+  //-   li.leftArrow
+  //-     i.fa.fa-chevron-circle-left(style="font-size:20px;color:balck")
+  //-   li.reomveclass.arrow1.clickauto 1
+  //-   li.reomveclass.arrow1 2
+  //-   li.reomveclass.arrow1 3
+  //-   li.reomveclass.arrow1 4
+  //-   li.reomveclass.arrow1 5
+  //-   li.rightArrow
+  //-     i.fa.fa-chevron-circle-right(style="font-size:20px;color:balck;")
+
+  section.banner
+    .row-banner
+      .content
+        span double cheese
+        h3 burger
+        p with cococola and fries
+        a.btn(href="#") order now
+    .grid-banner
+      .grid
+        img(src="image/banner-5.jpg", alt="")
+        //- video(src="image/banner-1.mp4", alt="" autoplay)
+        //- video(autoplay loop)
+        //-  source(src="image/banner-1.mp4", type="video/mp4")
+        //-  | Your browser does not support the video tag.
+
+        .content
+          //- span special offer
+          //- h3 upto 50% off
+          a.btn(href="#") order now
+      .grid
+        img(src="image/banner-4.jpg", alt="")
+        .content.center
+          //- span special offer
+          //- h3 upto 25% extra
+          a.btn(href="#") order now
+      //- .grid
+      //-   img(src="image/banner-3.png", alt="")
+      //-   .content
+      //-     span limited offer
+      //-     h3 100% cashback
+      //-     a.btn(href="#") order now
+  section#menu.menu
+    .heading
+      span our menu
+      h3 our top dishes
+    .box-container
+      a.box(href="#")
+        img(src="image/menu-1.png", alt="")
+        .content
+          h3 delicious food
+          .price $40.00
+      a.box(href="#")
+        img(src="image/menu-2.png", alt="")
+        .content
+          h3 delicious food
+          .price $40.00
+      a.box(href="#")
+        img(src="image/menu-3.png", alt="")
+        .content
+          h3 delicious food
+          .price $40.00
+      a.box(href="#")
+        img(src="image/menu-4.png", alt="")
+        .content
+          h3 delicious food
+          .price $40.00
+      a.box(href="#")
+        img(src="image/menu-5.png", alt="")
+        .content
+          h3 delicious food
+          .price $40.00
+      a.box(href="#")
+        img(src="image/menu-6.png", alt="")
+        .content
+          h3 delicious food
+          .price $40.00
+  //- section#order.order
+  //-   //- .heading
+  //-   //-   span order now
+  //-   //-   h3 fastest home delivery
+  //-   //- .icons-container
+  //-   //-   .icons
+  //-   //-     img(src="image/icon-1.png", alt="")
+  //-   //-     h3 7:00am to 10:30pm
+  //-   //-   .icons
+  //-   //-     img(src="image/icon-2.png", alt="")
+  //-   //-     h3 +123-456-7890
+  //-   //-   .icons
+  //-   //-     img(src="image/icon-3.png", alt="")
+  //-   //-     h3 mumbai, india - 400104
+  //-   form(action="")
+  //-     .flex
+  //-       .inputBox
+  //-         span your name
+  //-         input(type="text", placeholder="customer's name", name="", id="")
+  //-       .inputBox
+  //-         span your number
+  //-         input(type="number", placeholder="customer's number", name="", id="")
+  //-     .flex
+  //-       .inputBox
+  //-         span your order
+  //-         input(type="text", placeholder="food you want", name="", id="")
+  //-       .inputBox
+  //-         span how much
+  //-         input(type="number", placeholder="number or orders", name="", id="")
+  //-     .flex
+  //-       .inputBox
+  //-         span your details
+  //-         input(type="text", placeholder="your message", name="", id="")
+  //-       .inputBox
+  //-         span pick up time
+  //-         input(type="datetime-local")
+  //-     .flex
+  //-       .inputBox
+  //-         textarea(placeholder="your address", id="", cols="30", rows="10")
+  //-       .inputBox
+  //-         iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1634657187694!5m2!1sen!2sin", allowfullscreen="", loading="lazy")
+  //-     input.btn(type="submit", value="proceed to order")
+  //- section#blogs.blogs
+  //-   .heading
+  //-     span our blogs
+  //-     h3 our daily stories
+  //-   .box-container
+  //-     .box
+  //-       .image
+  //-         h3
+  //-           i.fas.fa-calendar
+  //-           | 21st may, 2021
+  //-         img(src="image/blog-1.jpg", alt="")
+  //-       .content
+  //-         .tags
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | food /
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | burger /
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | pizza
+  //-         h3 blog title goes here...
+  //-         p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, earum.
+  //-         a.btn(href="#") read more
+  //-     .box
+  //-       .image
+  //-         h3
+  //-           i.fas.fa-calendar
+  //-           | 21st may, 2021
+  //-         img(src="image/blog-2.jpg", alt="")
+  //-       .content
+  //-         .tags
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | food /
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | burger /
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | pizza
+  //-         h3 blog title goes here...
+  //-         p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, earum.
+  //-         a.btn(href="#") read more
+  //-     .box
+  //-       .image
+  //-         h3
+  //-           i.fas.fa-calendar
+  //-           | 21st may, 2021
+  //-         img(src="image/blog-3.jpg", alt="")
+  //-       .content
+  //-         .tags
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | food /
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | burger /
+  //-           a(href="#")
+  //-             i.fas.fa-tag
+  //-             | pizza
+  //-         h3 blog title goes here...
+  //-         p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, earum.
+  //-         a.btn(href="#") read more
+  //- section#testimonials.section-testimonials
+  //-   .testimonials-container
+  //-     span.subheading Testimonials
+  //-     h2.heading-secondary Once you try it, you can&apos;t go back
+  //-     .testimonials
+  //-       figure.testimonial
+  //-         img.testimonial-img(alt="Photo of customer Dave Bryson", src="image/customers/dave.jpg")
+  //-         blockquote.testimonial-text
+  //-           | Inexpensive, healthy and great-tasting meals, without even
+  //-           | having to order manually! It feels truly magical.
+  //-         p.testimonial-name &amp;mdash; Dave Bryson
+  //-       figure.testimonial
+  //-         img.testimonial-img(alt="Photo of customer Ben Hadley", src="image/customers/ben.jpg")
+  //-         blockquote.testimonial-text
+  //-           | The AI algorithm is crazy good, it chooses the right meals for
+  //-           | me every time. It&apos;s amazing not to worry about food anymore!
+  //-         p.testimonial-name &amp;mdash; Ben Hadley
+  //-       figure.testimonial
+  //-         img.testimonial-img(alt="Photo of customer Steve Miller", src="image/customers/steve.jpg")
+  //-         blockquote.testimonial-text
+  //-           | Omnifood is a life saver! I just started a company, so there&apos;s
+  //-           | no time for cooking. I couldn&apos;t live without my daily meals now!
+  //-         p.testimonial-name &amp;mdash; Steve Miller
+  //-       figure.testimonial
+  //-         img.testimonial-img(alt="Photo of customer Hannah Smith", src="image/customers/hannah.jpg")
+  //-         blockquote.testimonial-text
+  //-           | I got Omnifood for the whole family, and it frees up so much
+  //-           | time! Plus, everything is organic and vegan and without plastic.
+  //-         p.testimonial-name &amp;mdash; Hannah Smith
+  //-   .gallery
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-1.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-       // <figcaption>Caption</figcaption>
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-2.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-3.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-4.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-5.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-6.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-7.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-8.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-9.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-10.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-11.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+  //-     figure.gallery-item
+  //-       img(src="image/gallery/gallery-12.jpg", alt=`Photo of beautifully
+  //-         arranged food`)
+
+  section.footer
+    .newsletter
+      h3 newsletter
+      form(action="")
+        input(type="email", name="", placeholder="enter your email", id="")
+        input(type="submit", value="subscribe")
+    .box-container
+      .box
+        h3 our menu
+        a(href="#")
+          i.fas.fa-arrow-right
+          | pizza
+        a(href="#")
+          i.fas.fa-arrow-right
+          | burger
+        a(href="#")
+          i.fas.fa-arrow-right
+          | chicken
+        a(href="#")
+          i.fas.fa-arrow-right
+          | pasta
+        a(href="#")
+          i.fas.fa-arrow-right
+          | and more...
+      .box
+        h3.striplink quick links
+        a(href="#home")
+          i.fas.fa-arrow-right
+          | home
+        a(href="#about")
+          i.fas.fa-arrow-right
+          | about
+        a(href="#popular")
+          i.fas.fa-arrow-right
+          | popular
+        a(href="#menu")
+          i.fas.fa-arrow-right
+          | menu
+        a(href="#order")
+          i.fas.fa-arrow-right
+          | order
+        a(href="#blogs")
+          i.fas.fa-arrow-right
+          | blogs
+      .box
+        h3 extra links
+        a(href="/paymentGateway")
+          i.fas.fa-arrow-right
+          | my order
+        a(href="#")
+          i.fas.fa-arrow-right
+          | my account
+        a(href="#")
+          i.fas.fa-arrow-right
+          | my favorite
+        a(href="#")
+          i.fas.fa-arrow-right
+          | terms of use
+        a(href="#")
+          i.fas.fa-arrow-right
+          | privary policy
+      .box
+        h3 opening hours
+        p monday : 7:00am to 10:00pm
+        p tuesday : 7:00am to 10:00pm
+        p wednesday : 7:00am to 10:00pm
+        p friday : 7:00am to 10:00pm
+        p saturday and sunday closed
+    .bottom
+      .share
+        a.fab.fa-facebook-f(href="#")
+        a.fab.fa-twitter(href="#")
+        a.fab.fa-instagram(href="#")
+        a.fab.fa-linkedin(href="#")
+        a.fab.fa-pinterest(href="#")
+      .credit  created 
+        span abdullah web designer
+        | | all rights reserved!

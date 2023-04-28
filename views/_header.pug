@@ -1,0 +1,32 @@
+header.header
+  a.logo(href="/")
+    i.fas.fa-utensils
+    |Organic Food
+  nav.navbar
+    a(href="/") home
+    a(href="/about") About
+    a(href="#popular") Popular
+    a(href="#menu") Menu
+    //- a(href="#testimonials") Testimonials
+    a.singNav(href="/signup") Sign in 
+
+
+ 
+  .icons
+    .fas.fa-bars#menu-btn
+    a(href="/about")
+      .fas.fa-search 
+      //#search-btn
+    .fas.fa-shopping-cart#cart-btn 
+      span.totalAddCart
+        
+    if user 
+      a(href="/me")
+        .fa-solid.fa-user-check
+
+    else
+      a(href="/login")
+        .fas.fa-user#login-btn
+      a(href="/signup")  
+        .fa-solid.fa-right-to-bracket#signin-btn 
+
